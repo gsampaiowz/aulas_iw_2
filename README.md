@@ -1,4 +1,5 @@
-# Aulas_IW_II     Formatando Strings.
+# Aulas_IW_II    
+## Formatando Strings.
 
 var s = ´JavaScript´  <br>
 s.length                // quantos caracteres a string tem   <br>
