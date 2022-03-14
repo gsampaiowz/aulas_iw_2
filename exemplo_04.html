@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="PT-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplom 04</title>
+    <style>
+        *{
+            background-color: beige;
+            text-align: center;
+            font-family: monospace;
+           
+        }
+
+        
+    </style>
+</head>
+<body>
+    <h1>Exemplo 04</h1>
+    <script>
+        //var nome = prompt('Digite seu nome: ')
+        //var qtde = nome.length
+        //alert('Seu nome tem ' + nome.length + ' letras')
+        //alert('Valor de qtde = ' + qtde)                   
+        //document.write(`Olá, seu nome é ${nome}. \n`)
+        //document.write(`Olá ${nome}, seu nome em maiúsculo é ${nome.toUpperCase()}. \n`)
+        //document.write('Seu nome tem ' + qtde + ' letras. \n')
+
+        // n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) -> CONVERSÃO PARA REAIS <- trocar a sigla para de outras moedas
+
+        var n1 = 1543.5
+        n1.toFixed(2)
+        n1.toLocaleString
+        // toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})
+        document.write(`Eu queria ter ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
+    </script>
+    
+</body>
+</html>
