@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evento2</title>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+    <input type="number" name="n1" id="n1">
+    <input type="number" name="n2" id="n2">
+    <input type="button" value="somar" onclick="somar()">
+    <input type="button" value="subtrair" onclick="subtrair()">
+    <input type="button" value="multiplicar" onclick="multiplicar()">
+    <input type="button" value="dividir" onclick="dividir()">
+    <div id="resultado">Resultado</div>
+
+    <script>
+            var n1 = document.getElementById('n1')
+            var n2 = document.getElementById('n2')
+            var res = document.getElementById('resultado')
+
+        function somar(){
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+
+            var soma = num1 + num2
+            res.innerText = `A soma de ${num1} + ${num2} é ${soma}`
+        }
+        function subtrair(){
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+
+            var subs = num1 - num2
+            res.innerText = `A subtração de ${num1} - ${num2} é ${subs}`
+        }
+        function multiplicar(){
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+
+            var mults = num1 * num2
+            res.innerText = `A multiplicação de ${num1} * ${num2} é ${mults}`
+        }
+        function dividir(){
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+
+            var divis = num1 / num2
+            res.innerText = `A divisão de ${num1} / ${num2} é ${divis}`
+        }
+    </script>
+</body>
+</html>
