@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+    <style>
+        body{
+            color: aliceblue;
+            background-color: royalblue;
+            text-align: center;
+            margin-top: 250px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        input{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite 2 notas de 0 a 10 para calcularmos a média entre ambas</h1>
+    <input type="number" id="n1" placeholder="Nota 1">
+    <input type="number" id="n2" placeholder="Nota 2">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular(){
+            var n1 = document.querySelector('input#n1')
+            var n2 = document.querySelector('input#n2')
+            var res = document.querySelector('div#res')
+            var n1 = n1.value
+            var n2 = n2.value
+            var n1 = parseInt(n1)
+            var n2 = parseInt(n2)
+            var media = (n1 + n2) / 2
+            if(media>=9 && media<=10){
+                res.innerHTML = `A média das notas é ${media}, e o conceito é <strong>A</strong>`
+                alert(`Notas: ${n1} e ${n2}, Média: ${media}, Conceito: A, APROVADO`)
+            }else{
+                if(media>=7.5 && media<9){
+                    res.innerHTML = `A média das notas é ${media}, e o conceito é <strong>B</strong>`
+                    alert(`Notas: ${n1} e ${n2}, Média: ${media}, Conceito: B, APROVADO`)
+                }else{
+                    if(media>=6 && media<7.5){
+                        res.innerHTML = `A média das notas é ${media}, e o conceito é <strong>C</strong>`
+                        alert(`Notas: ${n1} e ${n2}, Média: ${media}, Conceito: C, APROVADO`)
+                    }else{
+                        if(media>=4 && media<6){
+                            res.innerHTML = `A média das notas é ${media}, e o conceito é <strong>D</strong>`
+                            alert(`Notas: ${n1} e ${n2}, Média: ${media}, Conceito: D, REPROVADO`)
+                        }else{
+                            if(media>=0 && media<4){
+                                res.innerHTML = `A média das notas é ${media}, e o conceito é <strong>E</strong>`
+                                alert(`Notas: ${n1} e ${n2}, Média: ${media}, Conceito: E, REPROVADO`)
+                            }else{
+                                res.innerHTML = 'Você digitou uma nota inválida!'
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

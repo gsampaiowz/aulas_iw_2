@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 01</title>
+    <style>
+        body{
+            color: aliceblue;
+            background-color: royalblue;
+            text-align: center;
+            margin-top: 250px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        input{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Digite uma letra e veremos se ela é vogal ou consoante</h1>
+    <input type="text" id="txt" placeholder="Letra">
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res"></div>
+    <script>
+        function verificar(){
+            var txt = document.querySelector('input#txt')
+            var res = document.querySelector('div#res')
+            var letra = (txt.value)
+            var letra = letra.toUpperCase()
+            if(letra=='A' || letra=='E' || letra=='I' || letra=='O' || letra=='U'){
+                res.innerHTML = `<hr> A letra ${letra} é uma vogal`
+            }else{
+                if(letra=='B' || letra=='C' || letra=='F' || letra=='G' || letra=='H' || letra=='J' || letra=='K' || letra=='L' || letra=='M' || letra=='N' || letra=='P' || letra=='Q' || letra=='R' || letra=='S' || letra=='T' || letra=='V' || letra=='W' || letra=='X' || letra=='Y' || letra=='Z'){
+                   res.innerHTML = `<hr>A letra ${letra} é uma consoante` 
+                }else{
+                    res.innerHTML = '<hr>Você não digitou uma letra'
+                }
+                
+            }
+        }
+    </script>
+</body>
+</html>

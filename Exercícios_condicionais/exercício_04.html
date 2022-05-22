@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+    <style>
+        body {
+            color: aliceblue;
+            background-color: royalblue;
+            text-align: center;
+            margin-top: 250px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
+        input {
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Digite os valores de A, B e C para calcularmos a equação de 2ºgrau</h1>
+    <input type="number" id="a" placeholder="A">
+    <input type="number" id="b" placeholder="B">
+    <input type="number" id="c" placeholder="C">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res"></div>
+    <script>
+        function calcular() {
+            var a = parseFloat(document.querySelector('input#a').value)
+            var b = parseFloat(document.querySelector('input#b').value)
+            var c = parseFloat(document.querySelector('input#c').value)
+            var res = document.querySelector('div#res')
+            var delta = b * b - 4 * a * c
+            if (delta > 0) {
+                x1 = (-b + Math.sqrt(delta)) / (2 * a)
+                x2 = (-b - Math.sqrt(delta)) / (2 * a)
+                res.innerHTML = `Delta= ${delta} <hr> Raiz 1= ${x1} <br/> Raiz 2= ${x2} <hr> As raízes são reais pois o delta é positivo`
+            } else {
+                if (delta == 0) {
+                    raiz = (-b + Math.sqrt(delta)) / (2 * a)
+                    res.innerHTML = `Delta= ${delta} <hr> Raiz dupla= ${raiz} <hr> As raízes são iguais pois o delta é igual a zero`
+                } else {
+                    res.innerHTML = 'Não existem raízes reais pois o delta é negativo!'
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 03</title>
+    <style>
+        body{
+            color: aliceblue;
+            background-color: royalblue;
+            text-align: center;
+            margin-top: 250px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+        input{
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>População</h1>
+    <script>
+        var popA = parseInt(prompt('Digite a população do país A'))
+        var taxaA = parseFloat(prompt('Digite a taxa de crescimento do país A'))
+        var popB = parseInt(prompt('Digite a população do país B'))
+        var taxaB = parseFloat(prompt('Digite a taxa de crescimento país B'))
+        var ano = 0
+        if(popA < popB){
+            do{
+            var popA = (popA * taxaA) + popA
+            var popB = (popB * taxaB) + popB
+            var ano = ano + 1
+        }while(popA < popB)
+        }else{
+            do{
+            var popA = (popA * taxaA) + popA
+            var popB = (popB * taxaB) + popB
+            var ano = ano + 1
+        }while(popB < popA)
+        
+        }
+        document.write(`A população do país com menor população vai se igualar ou ultrapassar a do pais com maior população em ${ano} anos.`)
+    </script>
+</body>
+</html>
