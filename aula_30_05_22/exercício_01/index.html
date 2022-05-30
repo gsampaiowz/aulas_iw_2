@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício</title>
+    <style>
+        body {
+            color: aliceblue;
+            background-color: darkred;
+            text-align: center;
+            margin-top: 100px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 20px;
+        }
+
+        button {
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px;
+            border-radius: 25px;
+
+        }
+
+        input {
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding: 20px;
+            border-radius: 25px;
+        }
+
+        h1 {
+            -webkit-text-stroke-width: 1.5px;
+            -webkit-text-stroke-color: #000;
+        }
+
+        .radio {
+            border-radius: 10px;
+            width: 35px;
+            height: 35px;
+            vertical-align: -10px;
+        }
+
+        #calcular,
+        #masc,
+        #fem {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="conteudo">
+        <h1>GERADOR DE PESSOAS</h1>
+        <p>Digite o ano de nascimento: <input type="number" placeholder="Ano" id="ano"></p>
+        <p>Escolha o sexo:
+            <input class="radio" type="radio" name="sex" id="sex" value="Masculino">
+            <label for="masc">Masculino</label>
+            <input class="radio" type="radio" name="sex" id="sex" value="Feminino">
+            <label for="fem">Feminino</label>
+        </p>
+        <hr>
+        <input id="calular" type="button" value="Calcular">
+        <hr>
+        <script src="js/script.js"></script>
+    </div>
+</body>
+
+</html>
